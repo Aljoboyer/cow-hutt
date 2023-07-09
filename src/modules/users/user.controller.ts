@@ -1,5 +1,5 @@
 import {Request, Response} from 'express'
-import { createUser, deleteUser, getAUser, getAllUser, updateUser } from './user.service'
+import { cowOrderService, createUser, deleteUser, getAUser, getAllUser, updateUser } from './user.service'
 
 export const CreateUserController = async (req: Request, res: Response) => {
 
@@ -60,3 +60,14 @@ export const deleteUserController = async (req: Request, res: Response) => {
 }
 )
 }
+
+export const CowOrderController = async (req: Request, res: Response) => {
+  const OrderDetail = await cowOrderService(req.body)
+
+  res.send(  {
+    "success": true, 
+    "statusCode":200,
+    "message": "Cow deleted successfully",
+    "data": OrderDetail, 
+  })
+} 

@@ -1,5 +1,5 @@
-import { CowOrderController } from "../cow/cow.controller";
-import { CreateUserController, getAllUserController, getSingleUser, deleteUserController, updateUserController } from "./user.controller";
+
+import {CowOrderController, CreateUserController, getAllUserController, getSingleUser, deleteUserController, updateUserController } from "./user.controller";
 
 const router = require("express").Router();
 

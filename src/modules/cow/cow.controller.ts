@@ -2,7 +2,6 @@ import {Request, Response} from 'express'
 import { createCowService, getAllCow , getACow, deleteCow, updateCow, getCowByFiltering} from './cow.service'
 import pick from '../../helper/pickHelper'
 import { PaginationField } from '../../constants/paginationConstants'
-import { cowOrderService } from '../users/user.service'
 
 
 export const CreateCowController = async (req: Request, res: Response) => {
@@ -80,13 +79,3 @@ export const CowFilterController = async (req: Request, res: Response) => {
     })
   }
 
-export const CowOrderController = async (req: Request, res: Response) => {
-      const OrderDetail = await cowOrderService(req.body)
-  
-      res.send(  {
-        "success": true, 
-        "statusCode":200,
-        "message": "Cow deleted successfully",
-        "data": OrderDetail, 
-      })
-    } 

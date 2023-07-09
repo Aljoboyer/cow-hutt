@@ -92,7 +92,7 @@ const deleteCow = async (id: string): Promise<ICow[] | null> => {
     ]
     const {page, limit, skip, srotBy, sortOrder} = PaginationCalculate(paginationOption);
 
-    const sortOption = {}
+    const sortOption: any = {}
     if(srotBy && sortOrder){
         sortOption[srotBy] = sortOrder
     }

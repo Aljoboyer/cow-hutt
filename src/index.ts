@@ -1,7 +1,7 @@
 import connectDB from "./connection/DBConnect"
 import express, {Response, Request} from 'express';
 import cors from 'cors'
-import config from "../src/config/config";
+import config from "./config/config";
 import {Server} from 'http'
 const app = express()
 
@@ -10,8 +10,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
-
-//Importing route
+//Importing routes
 import router from "./routes";
 
 app.use("/", router);
