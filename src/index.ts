@@ -15,10 +15,8 @@ import router from "./routes";
 
 app.use("/", router);
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('Hello World!')
-  // throw new ApiError(400, 'This is an Error')
-    
+app.get('/ping', (_req: Request, res: Response) => {
+  return res.send('pong 🏓')
 })
  
 app.listen(config.port, () => {

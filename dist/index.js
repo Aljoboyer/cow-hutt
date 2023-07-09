@@ -15,9 +15,8 @@ app.use(express_1.default.urlencoded({ extended: true }));
 //Importing routes
 const routes_1 = __importDefault(require("./routes"));
 app.use("/", routes_1.default);
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-    // throw new ApiError(400, 'This is an Error')
+app.get('/ping', (_req, res) => {
+    return res.send('pong 🏓');
 });
 app.listen(config_1.default.port, () => {
     console.log(`Cow Hut app listening on port ${config_1.default.port}`);
