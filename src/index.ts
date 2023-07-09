@@ -15,7 +15,7 @@ import router from "./routes";
 
 app.use("/", router);
 
-app.get('/ping', (_req: Request, res: Response) => {
+app.get('/', (_req: Request, res: Response) => {
   return res.send('pong 🏓')
 })
  

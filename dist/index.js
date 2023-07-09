@@ -15,7 +15,7 @@ app.use(express_1.default.urlencoded({ extended: true }));
 //Importing routes
 const routes_1 = __importDefault(require("./routes"));
 app.use("/", routes_1.default);
-app.get('/ping', (_req, res) => {
+app.get('/', (_req, res) => {
     return res.send('pong 🏓');
 });
 app.listen(config_1.default.port, () => {
