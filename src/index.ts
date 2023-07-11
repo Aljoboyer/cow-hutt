@@ -3,12 +3,15 @@ import express, {Response, Request} from 'express';
 import cors from 'cors'
 import config from "./config/config";
 import {Server} from 'http'
+import cookieParser from 'cookie-parser';
 const app = express()
 
 connectDB()
 app.use(cors())
+app.use(cookieParser());
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+
 
 //Importing routes
 import router from "./routes";
