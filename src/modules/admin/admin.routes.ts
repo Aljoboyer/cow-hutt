@@ -4,6 +4,6 @@ import { CreateAdminController, adminLoginController } from "./admin.controller"
 const router = require("express").Router();
 
 router.post('/create-admin',CreateAdminController)
-router.post('/login',jwtChecker,  adminLoginController)
+router.post('/login',  adminLoginController)
 
 export default router
